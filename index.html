@@ -9,14 +9,21 @@
 </head>
 <body>
     <h1>Image Gallery</h1>
-    
-<div id="container">
-  <img id="Image" alt="integrfy Images"  height="298">
-  <div id="data"></div>
-</div>
 
-<button onclick="getNextPhoto()" id="Next">Next</button>
-<button onclick="getDetails()" id="Details">Details</button>
+<div id="mainContainer">
+   <div id="subContainer">
+      <img id="Image" alt="integrfy Images"  height="350px">
+      <div id="data"></div>
+   </div>
+</div>
+<!--<input type="button" value="previous" id="Prev" name="prev" onclick="getBackPhoto()" >
+<input type="button" value="next" id="Next" name="next" onclick="getNextPhoto()"  >-->
+
+<button onclik="getBackPhoto()()" id="Prev">Prev</button>
+
+<button onclik="getNextPhoto()" id="Next">Next</button>
+
+<!--<button onclick="getDetails()" id="Details">Details</button>-->
 <script src="photosInfo.js"></script>
 <script src="main.js"></script>
 </body>
