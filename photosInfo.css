@@ -10,7 +10,7 @@ h1{
     display: flex;
   
     flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    height: 480px;
    /*width: 600px;*/
    background-color: #27ae60;
@@ -21,6 +21,9 @@ h1{
 }
 
 #subContainer{
+    /*display: flex;*/
+    
+
     border: 4px solid black;
     justify-content: center;
     background-color: brown;
@@ -84,5 +87,20 @@ button{
   #data{
       background-color: blue;
   }
+
+  #Details{
+    width: 80px;
+    display: block;
+    margin-left: 591px;
+}
+  
+
+  .hideDetails{
+      display: none;
+  }
+
+  /*.showDetails{
+      display: inline-block;
+  }*/
   
   

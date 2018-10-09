@@ -26,10 +26,10 @@ document.querySelector('#Next').addEventListener('click', function(e) {
     getBackPhoto();
    });
 
-    /*document.querySelector('#Details').addEventListener('click', function(e) {
+    document.querySelector('#Details').addEventListener('click', function(e) {
         getDetails();
         
-    });*/
+    });
 
     let imageIndex = 0;
     
@@ -42,7 +42,8 @@ document.querySelector('#Next').addEventListener('click', function(e) {
         }
 
        img.src = `./images/${array[imageIndex].src}`;
-       getDetails();
+       document.querySelector("#data").classList.add('hideDetails');
+       //getDetails();
       }
 
      function getBackPhoto() {
@@ -53,23 +54,23 @@ document.querySelector('#Next').addEventListener('click', function(e) {
         }
 
        img.src = `./images/${array[imageIndex].src}`;
-       getDetails();
+       document.querySelector("#data").classList.add('hideDetails');
+       //getDetails();
       
      }
     
     function getDetails(){
+        let dataDiv = document.querySelector("#data");
        array.forEach(person => {
         
-        //console.log(person.firstName);
-           let dataDiv = document.querySelector("#data")
-           data.innerHTML = `<b>FirstName</b>: ${array[imageIndex].firstName}<br /> <b>LastName</b>: ${array[imageIndex].lastName} <br /><b>Nationality</b>: ${array[imageIndex].nationality}<br /><b>Title</b>: ${array[imageIndex].title}<br /><b>Joined On</b>: ${array[imageIndex].joinedOn}<br /><b>Src</b>: ${array[imageIndex].src}<br /><b>Motivates me</b>:  ${array[imageIndex].motivatesMe}<br /><b>Skills</b>:  ${array[imageIndex].skills}` ;
-          // console.log(`./images/${array[imageIndex].src}`);
-          //data.appendChild(wrapper);
-       })
+        dataDiv.innerHTML = `<b>FirstName</b>: ${array[imageIndex].firstName}<br /> <b>LastName</b>: ${array[imageIndex].lastName} <br /><b>Nationality</b>: ${array[imageIndex].nationality}<br /><b>Title</b>: ${array[imageIndex].title}<br /><b>Joined On</b>: ${array[imageIndex].joinedOn}<br /><b>Src</b>: ${array[imageIndex].src}<br /><b>Motivates me</b>:  ${array[imageIndex].motivatesMe}<br /><b>Skills</b>:  ${array[imageIndex].skills}` ;
+       });
+
+       document.querySelector("#data").classList.toggle("hideDetails");
     }
     
     img.src = `./images/${array[imageIndex].src}`;
-    getDetails(); 
+   // getDetails(); 
      
     
 
