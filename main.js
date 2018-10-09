@@ -48,7 +48,7 @@ document.querySelector('#Next').addEventListener('click', function(e) {
 
      function getBackPhoto() {
         if(imageIndex === (array.length - 1)){
-            //imageIndex = 0;
+            
         }else {
            imageIndex--;
         }
