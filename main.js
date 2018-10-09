@@ -1,11 +1,7 @@
 
-let wrapper = document.createElement('div');
-wrapper.id = "wrapperId";
-document.body.appendChild(wrapper);
-
 let img = document.querySelector("#Image");
 let next = document.querySelector("#Next");
-//img.appendChild(wrapper);
+
 
 //let details = document.querySelector("#Details");
 //let detailsValue = details.value;
@@ -63,10 +59,10 @@ document.querySelector('#Next').addEventListener('click', function(e) {
     
     function getDetails(){
        array.forEach(person => {
-           
+        
         //console.log(person.firstName);
            let dataDiv = document.querySelector("#data")
-           data.innerHTML = `FirstName: ${array[imageIndex].firstName}<br /> LastName: ${array[imageIndex].lastName} <br />Nationality: ${array[imageIndex].nationality}<br />Title: ${array[imageIndex].title}<br />Joined On: ${array[imageIndex].joinedOn}<br />Src: ${array[imageIndex].src}<br />Motivates me:  ${array[imageIndex].motivatesMe}<br />Skills:  ${array[imageIndex].skills}` ;
+           data.innerHTML = `<b>FirstName</b>: ${array[imageIndex].firstName}<br /> <b>LastName</b>: ${array[imageIndex].lastName} <br /><b>Nationality</b>: ${array[imageIndex].nationality}<br /><b>Title</b>: ${array[imageIndex].title}<br /><b>Joined On</b>: ${array[imageIndex].joinedOn}<br /><b>Src</b>: ${array[imageIndex].src}<br /><b>Motivates me</b>:  ${array[imageIndex].motivatesMe}<br /><b>Skills</b>:  ${array[imageIndex].skills}` ;
           // console.log(`./images/${array[imageIndex].src}`);
           //data.appendChild(wrapper);
        })
