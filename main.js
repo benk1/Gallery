@@ -69,7 +69,7 @@ document.querySelector('#Next').addEventListener('click', function(e) {
         let dataDiv = document.querySelector("#data");
         array.forEach(person => {
         dataDiv.style.backgroundColor = randomHexaNumberGenerator();
-        dataDiv.innerHTML = `<b>FirstName</b>: ${array[imageIndex].firstName}<br /><b>LastName</b>: ${array[imageIndex].lastName}</span><br /><b>Nationality</b>: ${array[imageIndex].nationality}<br /><b>Title</b>: ${array[imageIndex].title}<br /><b>Joined On</b>: ${array[imageIndex].joinedOn}<br /><b>Src</b>: ${array[imageIndex].src}<br /><b>Motivates me</b>:  ${array[imageIndex].motivatesMe}<br /><b>Skills</b>:  ${array[imageIndex].skills}` ;
+        dataDiv.innerHTML = `<b>FirstName</b>: ${array[imageIndex].firstName}<br /><b>LastName</b>: ${array[imageIndex].lastName}</span><br /><b>Nationality</b>: ${array[imageIndex].nationality}<br /><b>Title</b>: ${array[imageIndex].title}<br /><b>Joined On</b>: ${array[imageIndex].joinedOn}<br /><b>Src</b>: ${array[imageIndex].src}<br /><b>Motivates me</b>:  ${array[imageIndex].motivatesMe}<br /><b>Skills</b>:  <select id="select"${array[imageIndex].skills}</select>` ;
         });
 
        document.querySelector("#data").classList.toggle("hideDetails");
