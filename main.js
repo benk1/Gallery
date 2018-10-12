@@ -2,7 +2,13 @@
 let img = document.querySelector("#Image");
 let next = document.querySelector("#Next");
 
-
+function randomHexaNumberGenerator(num){
+    let result = "#";
+    for(let i = 0; i < 6; i++){
+    result += Math.floor(Math.random() * 16).toString(16);
+    }
+    return result;
+    }
 //let details = document.querySelector("#Details");
 //let detailsValue = details.value;
 
@@ -61,13 +67,13 @@ document.querySelector('#Next').addEventListener('click', function(e) {
     
     function getDetails(){
         let dataDiv = document.querySelector("#data");
-       array.forEach(person => {
-        
+        array.forEach(person => {
+        dataDiv.style.backgroundColor = randomHexaNumberGenerator();
         dataDiv.innerHTML = `<b>FirstName</b>: ${array[imageIndex].firstName}<br /> <b>LastName</b>: ${array[imageIndex].lastName} <br /><b>Nationality</b>: ${array[imageIndex].nationality}<br /><b>Title</b>: ${array[imageIndex].title}<br /><b>Joined On</b>: ${array[imageIndex].joinedOn}<br /><b>Src</b>: ${array[imageIndex].src}<br /><b>Motivates me</b>:  ${array[imageIndex].motivatesMe}<br /><b>Skills</b>:  ${array[imageIndex].skills}` ;
-       });
+        });
 
        document.querySelector("#data").classList.toggle("hideDetails");
-    }
+       }
     
     img.src = `./images/${array[imageIndex].src}`;
    // getDetails(); 

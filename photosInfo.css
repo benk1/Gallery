@@ -80,15 +80,18 @@ button{
 
   #previous{
       margin-top: 200px;
+      margin-left: 55px;
   }
 
   #next{
       float: right;
       margin-top: 200px;
+      margin-right: 55px;
   }
 
   #data{
-      background-color: blue;
+      /*background-color: blue;*/
+      color: black;
   }
 
   #Details{
